@@ -11,7 +11,7 @@ function Home() {
 					<div to={"/"}>
 						<img
 							className="logo"
-							src="./src/assets/Logo.png"
+							src="../src/assets/Logo.png"
 							alt=""
 						/>
 					</div>
@@ -19,7 +19,7 @@ function Home() {
 					<div>
 						<img
 							className="signin"
-							src="./src/assets/Menu.png"
+							src="../src/assets/Menu.png"
 							alt=""
 						/>
 					</div>
