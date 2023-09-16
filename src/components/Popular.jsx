@@ -25,16 +25,24 @@ const Popular = () => {
 		<div className="feature-list">
 			{popular.slice(0, 10).map((movie) => {
 				return (
-					<div key={movie.id} className="card">
-						<Link className="deats" to={"/movie/" + movie.id}>
+					<div
+						key={movie.id}
+						className="card"
+						data-testid="movie-card"
+					>
+						<Link className="deats" to={"/movies/" + movie.id}>
 							{movie.poster_path ? (
-								<img
-									src={`${imageLink}${movie.poster_path}`}
-									alt={movie.title}
-								/>
+								<div data-testid="movie-poster">
+									<img
+										src={`${imageLink}${movie.poster_path}`}
+										alt={movie.title}
+									/>
+								</div>
 							) : null}
-							<p>{movie.release_date}</p>
-							<h6>{movie.title}</h6>
+							<p data-testid="movie-release-date">
+								{movie.release_date}
+							</p>
+							<h6 data-testid="movie-title">{movie.title}</h6>
 						</Link>
 					</div>
 				);

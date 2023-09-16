@@ -8,7 +8,7 @@ function Pages() {
 	return (
 		<Routes location={location} key={location.pathname}>
 			<Route path="/" element={<Home />} />
-			<Route path="/movies/:name" element={<Movie />} />
+			<Route path="/movies/:id" element={<Movie />} />
 			{/* <Route path="/searched/:search" element={<Searched />} /> */}
 		</Routes>
 	);
