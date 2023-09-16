@@ -10,33 +10,31 @@ const Popular = () => {
 	}, []);
 
 	const getPopular = async () => {
-		const check = localStorage.getItem("popular");
-
-		if (check) {
-			setPopular(JSON.parse(check));
-		} else {
-			const APIKEY = import.meta.env.VITE_API_KEY;
-			const api = await axios.get(
-				`https://api.themoviedb.org/3/movie/top_rated?`
-			);
-
-			localStorage.setItem("popular", JSON.stringify(api.data.recipes));
-			setPopular(api.data.recipes);
-			console.log(api);
-		}
+		const API_KEY = import.meta.env.VITE_API_KEY;
+		const API_URL = "https://api.themoviedb.org/3/movie/top_rated?";
+		const api = await axios.get(
+			`${API_URL}api_key=${API_KEY}&language=en-US&page=1`
+		);
+		console.log(api.data.results);
+		setPopular(api.data.results);
 	};
 
+	const imageLink = "https://image.tmdb.org/t/p/w500";
+
 	return (
-		<div>
-			<h3>Popular Picks</h3>
-			{popular.map((recipe) => {
+		<div className="feature-list">
+			{popular.slice(0, 10).map((movie) => {
 				return (
-					<div key={recipe.id}>
-						<Link to={"/recipe/" + recipe.id}>
-							<p>{recipe.title}</p>
-							{recipe.image ? (
-								<img src={recipe.image} alt={recipe.title} />
+					<div key={movie.id} className="card">
+						<Link className="deats" to={"/movie/" + movie.id}>
+							{movie.poster_path ? (
+								<img
+									src={`${imageLink}${movie.poster_path}`}
+									alt={movie.title}
+								/>
 							) : null}
+							<p>{movie.release_date}</p>
+							<h6>{movie.title}</h6>
 						</Link>
 					</div>
 				);

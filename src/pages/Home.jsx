@@ -25,7 +25,7 @@ function Home() {
 					</div>
 				</div>
 				<div className="description">
-					<h2>John Wick 3 : Parabellum</h2>
+					<h1>John Wick 3 : Parabellum</h1>
 					<img src="./src/assets/Rating.png" alt="" />
 					<p>
 						John Wick is on the run after killing a member of the

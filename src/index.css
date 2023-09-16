@@ -64,7 +64,7 @@
   margin: 100px 95px;
 }
 
-.description h2{
+.description h1{
   width: 404px;
   font-size: 60px;
 }
@@ -87,13 +87,49 @@
 }
 
 .feature-header h2{
-font-size: 50px;
-font-weight: 700;
+  font-size: 50px;
+  font-weight: 700;
 }
 
 .feature-header p{
   color: #BE123C;
   font-size: 23px;
+}
+
+.feature-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin: auto;
+  gap: 70px;
+  margin: 0 95px;
+  padding-bottom: 100px;
+}
+
+.deats{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card img{
+  width: 350px;
+  height: 470px;
+}
+
+.card p{
+  font-size: 15px;
+  color: #9CA3AF;
+  font-weight: 700;
+}
+
+.card h6{
+  font-size: 20px;
+  color: #111827;
+  font-weight: 700;
+}
+
+.card a{
+  text-decoration: none;
 }
 
 .footer{
