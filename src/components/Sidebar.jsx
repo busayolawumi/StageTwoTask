@@ -24,19 +24,19 @@ function Sidebar() {
 				</div>
 				<div className="item-hignlight">
 					<div>
-						<img src={movie} alt="home" />
+						<img src={movie} alt="movie" />
 						<p>Movies</p>
 					</div>
 				</div>
 				<div className="item">
 					<div>
-						<img src={tv} alt="home" />
+						<img src={tv} alt="tv" />
 						<p>TV Series</p>
 					</div>
 				</div>
 				<div className="item">
 					<div>
-						<img src={calendar} alt="home" />
+						<img src={calendar} alt="calendar" />
 						<p>Upcoming</p>
 					</div>
 				</div>
@@ -61,7 +61,7 @@ function Sidebar() {
 					}}
 				>
 					<div>
-						<img src={logout} alt="home" />
+						<img src={logout} alt="logout" />
 						<p>Logout</p>
 					</div>
 				</div>

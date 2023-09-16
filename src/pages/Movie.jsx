@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import play from "../assets/Play.svg";
 import list from "../assets/List.svg";
+import Sidebar from "../components/Sidebar.jsx";
 
 function Movie() {
 	let params = useParams();
@@ -24,6 +25,7 @@ function Movie() {
 
 	return (
 		<>
+			<Sidebar />
 			<div>
 				<div className="details-body1">
 					<div className="background-poster">
