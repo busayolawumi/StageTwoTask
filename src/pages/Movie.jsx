@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Sidebar from "../components/sidebar";
 import play from "../assets/Play.svg";
 import list from "../assets/List.svg";
 
@@ -9,7 +8,6 @@ function Movie() {
 	let params = useParams();
 
 	const [movie, setMovie] = useState({});
-	const [active, setActive] = useState("summary");
 
 	useEffect(() => {
 		getDetails();
@@ -26,7 +24,6 @@ function Movie() {
 
 	return (
 		<>
-			<Sidebar />
 			<div>
 				<div className="details-body1">
 					<div className="background-poster">
